@@ -1,0 +1,207 @@
+// about start
+
+.about{
+    position: relative;
+    margin-bottom: 80px;
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding: 80px 0;
+
+    .popular_tours__title__h2{
+        color:$fff;
+    }
+    
+    &__list{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        grid-gap: 18px;
+        flex-direction: column;
+    }
+
+    &__menu{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        grid-gap: 20px;
+        flex-wrap: wrap;
+
+        li{
+            position: relative;
+        }
+
+        li+li{
+            padding-left: 28px;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                display: block;
+                background-color:$fff;
+                width: 8px;
+                height: 2px;
+                transform: translate(0,-50%);
+                -webkit-transform: translate(0,-50%);
+                -moz-transform: translate(0,-50%);
+                -ms-transform: translate(0,-50%);
+                -o-transform: translate(0,-50%);
+            }
+        }
+    }
+
+    &__menu__link{
+        @include fontAll(18px,500,$fff);
+        line-height: 135%;
+    }
+}
+
+// about end
+
+
+// about_contint start
+
+.about_contint{
+    position: relative;
+    margin-bottom: 80px;
+
+    &__text{
+        @include fontAll(18px,400,$text);
+        line-height: 145%;
+        text-align: justify;
+        h1,h2,h3,h4,h5,h6,em,strong{
+            font-size: 110%;
+            color:$title;
+            font-weight: 700;
+            font-style: normal;
+            display: inline-block;
+        }
+
+        a{
+            font-size: 110%;
+            color:$title;
+            font-weight: 700;
+            font-style: normal;
+            display: inline-block;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            min-height: 250px;
+            object-fit: cover;
+            margin: 20px 0;
+
+            border-radius:8px;
+            -webkit-border-radius:8px;
+            -moz-border-radius:8px;
+            -ms-border-radius:8px;
+            -o-border-radius:8px;
+        }
+    }
+
+    &__cart__videos{
+        position: relative;
+        float: right;
+        @include fiximg(50%,400px,true);
+        margin-left: 30px;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        overflow: hidden;
+        border-radius:8px;
+        -webkit-border-radius:8px;
+        -moz-border-radius:8px;
+        -ms-border-radius:8px;
+        -o-border-radius:8px;
+
+        a{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .is-play{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 15px;
+                height: 20px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+// about_contint end
+
+
+@media (max-width:1200px){
+    .about_contint__img{
+        height: 600px;
+    }
+
+    .about__menu__link,
+    .about_contint__text{
+        font-size: 16px;
+    }
+
+    .about{
+        padding: 60px 0;
+    }
+
+    .about_contint__cart__videos {
+        height: 350px;
+    }
+}
+
+@media (max-width:1000px){
+    .about_contint__img{
+        height: 500px;
+    }
+
+    .about_contint__cart__videos{
+        float: inherit;
+        margin-left: 0;
+        width: 100%;
+        height: 500px;
+    }
+}
+
+@media (max-width:900px){
+    .about_contint__img{
+        height: auto;
+    }
+
+    .about_contint__cart__videos{
+        height: 400px;
+    }
+}
+
+@media (max-width:650px){
+    .about_contint__cart__videos{
+        height: 300px;
+    }
+}
+
+@media (max-width:400px){
+    .about_contint__cart__videos{
+        height: 250px;
+    }
+}
