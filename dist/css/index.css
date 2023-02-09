@@ -43,7 +43,7 @@
   src: url("../fonts/Montserrat-Black.ttf") format("truetype");
   font-weight: 900;
 }
-.footer__menu__link, .footer__isons__link, .writo_to_us__button, .useful__list .owl-next::after, .useful__list .owl-next, .useful__list .owl-prev::after, .useful__list .owl-prev, .subscribe__link, .tours_category__title__h3, .booking__form__button, .popular_tours__list__link1, .popular_tours__item__link, .popular_tours__item__img::after, .popular_tours__item__img, .popular_tours__item, .popular_tours__list .owl-next::after, .popular_tours__list .owl-next, .popular_tours__list .owl-prev::after, .popular_tours__list .owl-prev, .slider__link, .slider__list .slick-next, .slider__list .slick-prev, .slider__list li, .header__menu__link, .header__menu li, .contacts__button, .tours__pagination__link, .tours__pagination__next, .tours__cart__link {
+.footer__menu__link, .footer__isons__link, .writo_to_us__button, .useful__list .owl-next::after, .useful__list .owl-next, .useful__list .owl-prev::after, .useful__list .owl-prev, .subscribe__link, .tours_category__title__h3, .booking__form__button, .popular_tours__list__link1, .popular_tours__item__link, .popular_tours__item__img::after, .popular_tours__item__img, .popular_tours__item, .slider__link, .slider__list .slick-next, .slider__list .slick-prev, .slider__list li, .header__menu__link, .header__menu li, .contacts__button, .tours__pagination__link, .tours__pagination__next, .tours__cart__link {
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
@@ -1303,103 +1303,13 @@ body {
   text-align: center;
 }
 .popular_tours__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
   margin-top: 30px;
   margin-bottom: 40px;
 }
-.popular_tours__list .owl-dots {
-  display: none;
-}
-.popular_tours__list .owl-prev {
-  width: 60px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.14);
-  border-radius: 60px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  height: 60px;
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  left: -70px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  transform: translate(0, -50%);
-  -webkit-transform: translate(0, -50%);
-  -moz-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-}
-.popular_tours__list .owl-prev span {
-  display: none;
-}
-.popular_tours__list .owl-prev::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 12px;
-  height: 22px;
-  background-image: url("data:image/svg+xml,%3Csvg width='13' height='22' viewBox='0 0 13 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.3'%3E%3Cpath d='M12 21L1.95816 11L12 1' stroke='%23434242' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-.popular_tours__list .owl-prev:hover::after {
-  background-image: url("data:image/svg+xml,%3Csvg width='13' height='22' viewBox='0 0 13 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 1L1.9582 11L12 21' stroke='%23EF7F1A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
-.popular_tours__list .owl-next {
-  width: 60px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.14);
-  border-radius: 60px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  height: 60px;
-  position: absolute;
-  top: 50%;
-  z-index: 10;
-  right: -70px;
-  border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  transform: translate(0, -50%);
-  -webkit-transform: translate(0, -50%);
-  -moz-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-}
-.popular_tours__list .owl-next span {
-  display: none;
-}
-.popular_tours__list .owl-next::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 12px;
-  height: 22px;
-  background-image: url("data:image/svg+xml,%3Csvg width='13' height='22' viewBox='0 0 13 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.3'%3E%3Cpath d='M0.999176 1L11.041 11L0.999176 21' stroke='%23434242' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-.popular_tours__list .owl-next:hover::after {
-  background-image: url("data:image/svg+xml,%3Csvg width='13' height='22' viewBox='0 0 13 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 21L11.0418 11L1 1' stroke='%23EF7F1A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-}
 .popular_tours__item {
-  margin: 2px;
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.1);
@@ -2246,6 +2156,9 @@ body {
     font-size: 22px;
     max-height: 60px;
   }
+  .popular_tours__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .slider,
 .popular_tours,
 .tours_category,
@@ -2519,6 +2432,9 @@ body {
 .useful__img img {
     min-height: 250px;
     max-width: inherit;
+  }
+  .popular_tours__list {
+    grid-template-columns: repeat(1, 1fr);
   }
   .useful__img img {
     max-height: initial;
